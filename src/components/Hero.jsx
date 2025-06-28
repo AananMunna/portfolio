@@ -15,17 +15,18 @@ const Hero = () => {
         </div>
 
         <div>
-          <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm <span className='text-[#915EFF]'>Aanan</span>
-          </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I develop 3D visuals, user <br className='sm:block hidden' />
-            interfaces and web applications
-          </p>
-        </div>
+  <h1 className={`${styles.heroHeadText} text-white`}>
+    Hey, I’m <br /><span className='text-[#915EFF]'>Aanan Munna</span>
+  </h1>
+  <p className={`${styles.heroSubText} mt-2 text-white-100`}>
+    Crafting sleek, responsive frontend <br className='sm:block hidden' />
+    experiences with React and MERN stack.
+  </p>
+</div>
+
       </div>
 
-      <ComputersCanvas />
+      {/* <ComputersCanvas /> */}
 
       <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
         <a href='#about'>
