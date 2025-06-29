@@ -7,7 +7,7 @@ import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 
-const ServiceCard = ({ index, title, icon }) => (
+const ServiceCard = ({ index, title, icon: Icon }) => (
   <Tilt className='xs:w-[250px] w-full'>
     <motion.div
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
@@ -21,11 +21,13 @@ const ServiceCard = ({ index, title, icon }) => (
         }}
         className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
       >
-        <img
+        {/* <img
           src={icon}
           alt='web-development'
           className='w-16 h-16 object-contain'
-        />
+        /> */}
+                  <Icon className="w-8 h-8 text-white" />
+
 
         <h3 className='text-white text-[20px] font-bold text-center'>
           {title}
@@ -47,10 +49,12 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
-       I'm a frontend-focused MERN stack developer, fluent in JavaScript. I build clean, scalable, and user-friendly web apps using React and Node.js. Quick to learn and a strong collaborator, I turn ideas into real-world solutions. Let’s build something great together.
+       I’m a frontend-focused MERN stack developer fluent in JavaScript. I specialize in building clean, scalable, and user-friendly web applications using React and Node.js. With a quick learning curve and strong collaboration skills, I turn ideas into real-world digital solutions.
+
+Let’s build something amazing together.
       </motion.p>
 
-      <div className='mt-20 flex flex-wrap gap-10'>
+      <div className='mt-20  flex-wrap gap-10 hidden md:flex'>
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}

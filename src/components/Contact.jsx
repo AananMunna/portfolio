@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
@@ -142,14 +142,33 @@ const Contact = () => {
         </form>
       </motion.div>
 
-      <motion.div
-        variants={slideIn("right", "tween", 0.2, 1)}
-        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
-      >
-        <EarthCanvas />
-      </motion.div>
+      <EarthSection></EarthSection>
     </div>
   );
 };
+
+const EarthSection = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth <= 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  if (isMobile) return null; // 🔥 THIS LINE hides everything on mobile
+
+  return (
+    <motion.div
+      variants={slideIn("right", "tween", 0.2, 1)}
+      className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
+    >
+      <EarthCanvas />
+    </motion.div>
+  );
+};
+
 
 export default SectionWrapper(Contact, "contact");
