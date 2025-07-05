@@ -20,6 +20,8 @@ import { Monitor, Server, Palette, Atom } from "lucide-react";
 export const navLinks = [
   { id: "about", title: "About" },
   { id: "work", title: "Work" },
+  { id: "skills", title: "Skills" },
+  { id: "projects", title: "Projects" },
   { id: "contact", title: "Contact" },
 ];
 
@@ -47,10 +49,10 @@ export const technologies = [
 export const experiences = [
   {
     title: "Frontend Developer (Intern)",
-    company_name: "Starbucks",
+    company_name: "CodeCareBD",
     icon: starbucks,
     iconBg: "#383E56",
-    date: "Feb 2024 - June 2024",
+    date: "Jan 2025 - March 2025",
     points: [
       "Built responsive UI components with React and Tailwind CSS.",
       "Collaborated with backend developers to integrate APIs.",

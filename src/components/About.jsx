@@ -49,9 +49,7 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
-       I’m a frontend-focused MERN stack developer fluent in JavaScript. I specialize in building clean, scalable, and user-friendly web applications using React and Node.js. With a quick learning curve and strong collaboration skills, I turn ideas into real-world digital solutions.
-
-Let’s build something amazing together.
+       I’m a frontend-focused MERN stack developer who started coding out of pure curiosity. I love building clean, responsive, and user-friendly web apps with React and Node.js. Problem-solving and turning ideas into real products is what excites me most. Outside of code, I’m into music (Coldplay fan), design, and staying curious about the latest tech. Let’s build something awesome together.
       </motion.p>
 
       <div className='mt-20  flex-wrap gap-10 hidden md:flex'>

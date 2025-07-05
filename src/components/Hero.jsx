@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 // import { ComputersCanvas } from "./canvas";
-import selfie from '../assets/selfie.jpg';
+import selfie from '../assets/selfie5.jpg';
 
 const Hero = () => {
   return (
@@ -28,7 +28,7 @@ using React and the MERN stack.
         </div>
 
         {/* 🧍 Selfie Section */}
-        {/* <motion.div
+        <motion.div
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -39,7 +39,7 @@ using React and the MERN stack.
             alt="Aanan Munna Selfie"
             className="w-full h-full object-cover"
           />
-        </motion.div> */}
+        </motion.div>
       </div>
     </section>
   );

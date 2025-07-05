@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { logo, menu, close } from "../assets";
+import resume from "../assets/Aanan-Munna.pdf";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -63,6 +64,15 @@ const Navbar = () => {
           ))}
         </ul>
 
+        {/* Resume button for desktop */}
+        <a
+          href={resume}
+          download="Aanan-Munna-Resume.pdf"
+          className='hidden sm:block text-white border border-white px-4 py-1 rounded hover:bg-white hover:text-black transition'
+        >
+          Resume
+        </a>
+
         <div className='sm:hidden flex flex-1 justify-end items-center'>
           <img
             src={toggle ? close : menu}
@@ -91,6 +101,17 @@ const Navbar = () => {
                   <a href={`#${nav.id}`}>{nav.title}</a>
                 </li>
               ))}
+
+              {/* Resume button for mobile */}
+              <li>
+                <a
+                  href={resume}
+                  download="Aanan-Munna-Resume.pdf"
+                  className='text-white border border-white px-4 py-1 rounded hover:bg-white hover:text-black transition block'
+                >
+                  Resume
+                </a>
+              </li>
             </ul>
           </div>
         </div>
