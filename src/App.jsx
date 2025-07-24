@@ -12,6 +12,7 @@ import {
   StarsCanvas,
 } from "./components";
 import { styles } from "./styles";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -24,7 +25,7 @@ const App = () => {
         <About />
 
         <Experience />
-        <div className="hidden md:block" id="skills">
+        <div id="skills">
 
           <Tech />
           {/* all Tech content here */}
@@ -40,6 +41,7 @@ const App = () => {
             <StarsCanvas />
           </div>
         </div>
+        <Footer></Footer>
       </div>
     </BrowserRouter>
   );

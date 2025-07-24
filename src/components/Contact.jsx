@@ -56,12 +56,16 @@ const Contact = () => {
         setLoading(false);
 
         Swal.fire({
-          icon: "success",
-          title: "Sent!",
-          text: "Email sent successfully! 🎉",
-          timer: 2000,
-          showConfirmButton: false,
-        });
+  icon: "success",
+  title: "Message Sent",
+  text: "Thank you for reaching out! We'll get back to you shortly.",
+  background: "#1e1e1e",
+  color: "#ffffff",
+  iconColor: "#00ffab",
+  timer: 2500,
+  showConfirmButton: false,
+});
+
 
         setForm({
           name: "",

@@ -25,13 +25,25 @@ export const navLinks = [
   { id: "contact", title: "Contact" },
 ];
 
-// Services with correct icons (no JSX here)
 export const services = [
-  { title: "Frontend Developer", icon: Monitor },
-  { title: "MERN Stack Developer", icon: Server },
-  { title: "UI/UX Designer", icon: Palette },
-  { title: "React.js Developer", icon: Atom },
+  {
+    title: "Responsive Web Development",
+    icon: Monitor, // Indicates pixel-perfect front-end focus
+  },
+  {
+    title: "Full-Stack Application Development (MERN)",
+    icon: Server, // Shows your backend + database skills
+  },
+  {
+    title: "Modern UI/UX Implementation",
+    icon: Palette, // Less “designer,” more “I can implement great UI”
+  },
+  {
+    title: "Scalable React.js Solutions",
+    icon: Atom, // Big tech buzzword + what you do
+  },
 ];
+
 
 // Technologies with image assets
 export const technologies = [
