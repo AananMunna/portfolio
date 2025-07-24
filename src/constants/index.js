@@ -83,22 +83,39 @@ export const testimonials = [
 ];
 
 // Project images imports
-import valodeal from "../assets/valodeal.png";
+import valodeal from "../assets/valodeal (2).png";
 import othoba from "../assets/othoba.png";
 import gardening from "../assets/gardening.png";
-import studySync from "../assets/studySync.png";
+import studySync from "../assets/studySync (2).png";
+import tripTale from "../assets/tripTale.png";
 
 // Projects with details
 export const projects = [
+  {
+  name: "TripTale",
+  description:
+    "A feature-rich travel storytelling platform where users can share personal travel experiences through posts, images, and maps. Includes authentication, dynamic routing, and a responsive UI with Tailwind and Framer Motion. Designed to foster a community of explorers and storytellers.",
+  tags: [
+    { name: "react", color: "blue-text-gradient" },
+    { name: "express", color: "green-text-gradient" },
+    { name: "mongodb", color: "pink-text-gradient" },
+    { name: "tailwind", color: "purple-text-gradient" },
+  ],
+  image: tripTale, // Make sure you import or define this image in your project
+  source_code_link: "https://github.com/AananMunna/trip-tale-client",
+  live_link: "https://peppy-youtiao-479900.netlify.app/",
+}
+,
   {
     name: "StudySync",
     description:
       "A full-stack group study platform where users can create, submit, and grade assignments. Includes user authentication, protected routes, modals, leaderboards, and a highly interactive UI built with Framer Motion.",
     tags: [
-      { name: "react", color: "blue-text-gradient" },
-      { name: "nodejs", color: "green-text-gradient" },
-      { name: "mongodb", color: "pink-text-gradient" },
-    ],
+    { name: "react", color: "blue-text-gradient" },
+    { name: "tailwind", color: "purple-text-gradient" },
+    { name: "express", color: "green-text-gradient" },
+    { name: "mongodb", color: "pink-text-gradient" },
+  ],
     image: studySync,
     source_code_link: "https://github.com/AananMunna/studySync",
     live_link: "https://studysync-d270a.web.app/",
@@ -107,11 +124,12 @@ export const projects = [
     name: "Gardening Hub",
     description:
       "A modern gardening-themed website featuring Swiper sliders, Lottie animations, and a custom 'Featured Gardeners' section styled like social media profiles. Built with React and Tailwind for clean, responsive design.",
-    tags: [
-      { name: "react", color: "blue-text-gradient" },
-      { name: "tailwind", color: "green-text-gradient" },
-      { name: "mongodb", color: "pink-text-gradient" },
-    ],
+     tags: [
+    { name: "tailwind", color: "purple-text-gradient" },
+    { name: "react", color: "blue-text-gradient" },
+    { name: "mongodb", color: "pink-text-gradient" },
+    { name: "express", color: "green-text-gradient" },
+  ],
     image: gardening,
     source_code_link: "https://github.com/AananMunna/gardening-hub",
     live_link: "https://gardening-hub-a68ec.web.app/",
@@ -123,7 +141,6 @@ export const projects = [
     tags: [
       { name: "react", color: "blue-text-gradient" },
       { name: "tailwind", color: "green-text-gradient" },
-      { name: "vite", color: "pink-text-gradient" },
     ],
     image: othoba, // ⛔ Add your Othoba project screenshot here
     source_code_link: "https://github.com/AananMunna/othoba.com",
@@ -135,8 +152,7 @@ export const projects = [
       "An eCommerce deal platform offering exclusive products at discounted prices. Built using the MERN stack with features like product filtering, detail modals, and smooth animations using Framer Motion.",
     tags: [
       { name: "react", color: "blue-text-gradient" },
-      { name: "mongodb", color: "green-text-gradient" },
-      { name: "express", color: "pink-text-gradient" },
+      { name: "tailwind", color: "green-text-gradient" },
     ],
     image: valodeal, // ⛔ Add your ValoDeal project screenshot here
     source_code_link: "https://github.com/AananMunna/ValoDeal",

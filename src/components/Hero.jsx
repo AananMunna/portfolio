@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 // import { ComputersCanvas } from "./canvas";
-import selfie from '../assets/selfie5.jpg';
+import selfie from '../assets/final.png';
 
 const Hero = () => {
   return (
     <section className="relative w-full h-screen mx-auto">
       <div
-        className={`absolute inset-0 top-[40%] md:top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-col-reverse md:flex-row items-center gap-10`}
+        className={`absolute inset-0 top-[30%] md:top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-col-reverse md:flex-row items-center gap-10`}
       >
         {/* Dot + Line Decoration */}
         <div className="hidden md:flex flex-col justify-center items-center mt-5">

@@ -7,35 +7,30 @@ import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 
-const ServiceCard = ({ index, title, icon: Icon }) => (
-  <Tilt className='xs:w-[250px] w-full'>
+const ServiceCard = ({ index, title, icon: Icon }) => {
+  return (
     <motion.div
-      variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-      className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
+      variants={fadeIn("left", "spring", index * 0.5, 0.75)}
+      className="relative flex items-center gap-4 pl-6 py-4 border-l-4 border-gradient-to-b from-green-400 to-pink-500"
     >
-      <div
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
-      >
-        {/* <img
-          src={icon}
-          alt='web-development'
-          className='w-16 h-16 object-contain'
-        /> */}
-                  <Icon className="w-8 h-8 text-white" />
+      {/* Gradient pulse dot */}
+      <div className="absolute left-0 top-1/2 -translate-y-1/2 w-4 h-4 bg-gradient-to-r from-green-400 to-pink-500 rounded-full animate-ping" />
 
+      {/* Static dot */}
+      <div className="absolute left-0 top-1/2 -translate-y-1/2 w-3 h-3 bg-white rounded-full border border-pink-500" />
 
-        <h3 className='text-white text-[20px] font-bold text-center'>
+      {/* Icon and title */}
+      <div className="flex items-center gap-3">
+        <Icon className="w-6 h-6 text-white bg-gradient-to-r from-pink-500 to-green-400 p-1 rounded-full shadow-md" />
+        <h3 className="text-white text-[18px] font-semibold tracking-wide">
           {title}
         </h3>
       </div>
     </motion.div>
-  </Tilt>
-);
+  );
+};
+
+
 
 const About = () => {
   return (

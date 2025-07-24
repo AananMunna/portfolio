@@ -33,7 +33,7 @@ const App = () => {
 
         <Works />
         </div>
-        <Feedbacks />
+        {/* <Feedbacks /> */}
         <div className="relative z-0">
           <Contact />
           <div className="hidden md:block">

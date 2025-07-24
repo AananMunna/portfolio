@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Tilt from "react-tilt";
 import { motion } from "framer-motion";
 
@@ -17,14 +17,12 @@ const ProjectCard = ({
   source_code_link,
   live_link,
 }) => {
+  const [showFullDesc, setShowFullDesc] = useState(false);
+
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
+        options={{ max: 45, scale: 1, speed: 450 }}
         className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
       >
         <div className="w-full h-[230px] rounded-2xl overflow-hidden">
@@ -35,7 +33,7 @@ const ProjectCard = ({
           />
         </div>
 
-        {/* 🔥 NEW Button Section */}
+        {/* Buttons */}
         <div className="mt-4 flex justify-between items-center gap-3">
           {/* GitHub */}
           <button
@@ -46,7 +44,7 @@ const ProjectCard = ({
             GitHub
           </button>
 
-          {/* Live Preview */}
+          {/* Live Demo */}
           {live_link && (
             <button
               onClick={() => window.open(live_link, "_blank")}
@@ -71,12 +69,20 @@ const ProjectCard = ({
           )}
         </div>
 
-        {/* Text Content */}
+        {/* Title + Description */}
         <div className="mt-5">
           <h3 className="text-white font-bold text-[24px]">{name}</h3>
-          <p className="mt-2 text-secondary text-[14px]">{description}</p>
+          <p
+            className={`mt-2 text-secondary text-[14px] transition-all duration-300 cursor-pointer hover:opacity-90 ${
+              showFullDesc ? "" : "line-clamp-3"
+            }`}
+            onClick={() => setShowFullDesc(!showFullDesc)}
+          >
+            {description}
+          </p>
         </div>
 
+        {/* Tags */}
         <div className="mt-4 flex flex-wrap gap-2">
           {tags.map((tag) => (
             <p
@@ -92,30 +98,30 @@ const ProjectCard = ({
   );
 };
 
-
-
 const Works = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} `}>My work</p>
+        <p className={`${styles.sectionSubText}`}>My work</p>
         <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
       </motion.div>
 
-      <div className='w-full flex'>
+      <div className="w-full flex">
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
-          className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
+          className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
-          The following projects showcase my skills and experience through real-world examples. Each one includes a brief description, along with links to the code and live demo. These projects highlight my ability to solve complex problems, work with diverse technologies, and manage development workflows effectively.
-
-
+          The following projects showcase my skills and experience through
+          real-world examples. Each one includes a brief description, along
+          with links to the code and live demo. These projects highlight my
+          ability to solve complex problems, work with diverse technologies,
+          and manage development workflows effectively.
         </motion.p>
       </div>
 
-      <div className='mt-20 flex flex-wrap gap-7'>
+      <div className="mt-20 flex flex-wrap gap-7">
         {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} index={index} {...project} />
+          <ProjectCard key={project.name} index={index} {...project} />
         ))}
       </div>
     </>
