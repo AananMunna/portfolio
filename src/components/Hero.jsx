@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 // import { ComputersCanvas } from "./canvas";
-import selfie from '../assets/final.png';
+import selfie from '../assets/finlaHeroImage.jpeg';
 
 const Hero = () => {
   return (

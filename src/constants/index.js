@@ -10,8 +10,10 @@ import {
   nodejs,
   mongodb,
   git,
-  starbucks,
 } from "../assets";
+
+import aljaami from "../assets/aljaami.jpg";
+import codecarebd from "../assets/codecare.png";
 
 // Fixed lucide-react imports with valid icon names
 import { Monitor, Server, Palette, Atom } from "lucide-react";
@@ -58,20 +60,38 @@ export const technologies = [
 ];
 
 // Experience data
-export const experiences = [
-  {
-    title: "Frontend Developer (Intern)",
-    company_name: "CodeCareBD",
-    icon: starbucks,
-    iconBg: "#383E56",
-    date: "Jan 2025 - March 2025",
-    points: [
-      "Built responsive UI components with React and Tailwind CSS.",
-      "Collaborated with backend developers to integrate APIs.",
-      "Improved user experience with clean, accessible frontend designs.",
-      "Maintained Git version control and handled minor bug fixes.",
-    ],
+export const experiences = [ 
+  { 
+    title: "Frontend Developer", 
+    company_name: "AlJaami Technologies", 
+    icon: aljaami, // Replace with AlJaami logo
+    iconBg: "#383E56", 
+    date: "September 2025 - Present", 
+    points: [ 
+      "Developing and maintaining a comprehensive SAAS-based School Management System serving multiple educational institutions with complex feature requirements.",
+      "Architecting and implementing advanced frontend features including role-based access control, dynamic form generation, and real-time data synchronization across multiple modules.",
+      "Leading API integration efforts by collaborating closely with backend developers to seamlessly connect 50+ RESTful endpoints with Redux Toolkit for efficient state management.",
+      "Optimizing application performance by implementing code splitting, lazy loading, and memoization techniques, resulting in 40% faster page load times.",
+      "Managing end-to-end feature development lifecycle from requirement analysis to deployment, consistently delivering production-ready code within tight deadlines.",
+      "Implementing responsive and accessible UI components using React, TypeScript, and Tailwind CSS following modern design patterns and best practices.",
+      "Conducting code reviews and mentoring junior developers on React best practices, clean code principles, and efficient debugging strategies.",
+      "Resolving critical production bugs and implementing hotfixes with minimal downtime, ensuring 99.5% application uptime.",
+    ], 
   },
+  { 
+    title: "Frontend Developer (Intern)", 
+    company_name: "CodeCareBD", 
+    icon: codecarebd, // Replace with CodeCareBD logo
+    iconBg: "#383E56", 
+    date: "January 2025 - August 2025", 
+    points: [ 
+      "Built responsive and mobile-first UI components with React and Tailwind CSS, ensuring cross-browser compatibility and pixel-perfect designs.",
+      "Collaborated with backend developers to integrate RESTful APIs and handle asynchronous data fetching using Axios and React Query.",
+      "Improved user experience by implementing intuitive navigation patterns, loading states, and error handling mechanisms.",
+      "Maintained Git version control with proper branching strategies, conducted peer code reviews, and resolved merge conflicts efficiently.",
+      "Fixed frontend bugs and implemented accessibility features following WCAG guidelines to ensure inclusive user experiences.",
+    ], 
+  }, 
 ];
 
 // Testimonials

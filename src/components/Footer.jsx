@@ -8,12 +8,12 @@ const Footer = () => {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="bg-[#0d0d0d] text-gray-400 px-6 py-8 mt-12 border-t border-gray-800"
+      className=" text-gray-400 px-6 py-8 mt-12 border-t border-gray-800"
     >
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         {/* Contact Info */}
         <div className="text-center md:text-left">
-          <h2 className="text-xl font-bold text-white">Let’s connect 🤝</h2>
+          <h2 className="text-xl font-bold text-white">Let’s connect</h2>
           <p className="text-sm mt-1">aananmunna420@gmail.com</p>
           <p className="text-sm mt-1">+8801310468353</p>
         </div>
