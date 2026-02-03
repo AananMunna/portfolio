@@ -5,13 +5,14 @@ import { styles } from "../styles";
 import { github } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
+import { fadeIn, textVariant } from "../utils/motion";
 
 const Works = () => {
   return (
     <div className="w-full">
       {/* Hero Section */}
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-32">
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -24,7 +25,21 @@ const Works = () => {
           <p className="text-xl md:text-2xl text-white/60 font-light leading-relaxed">
             Beautiful solutions to complex problems.
           </p>
+        </motion.div> */}
+        <motion.div variants={textVariant()}>
+
+          <p className={styles.sectionSubText}>My Works</p>
+          <h2 className={styles.sectionHeadText}>Projects </h2>
         </motion.div>
+
+        <motion.p
+          variants={fadeIn("", "", 0.1, 1)}
+          className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
+        >
+          A curated selection of projects showcasing my expertise in full-stack development, UI/UX design, and problem-solving. Scroll to explore each project.
+
+
+        </motion.p>
       </div>
 
       {/* Projects Grid */}
